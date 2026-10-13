@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'YYText/**/*.{h,m}'
   s.public_header_files = 'YYText/**/*.{h}'
+  # include/ 下是给 SPM 用的头文件软链接
+  s.exclude_files = 'YYText/include/**'
   
   s.frameworks = 'UIKit', 'CoreFoundation','CoreText', 'QuartzCore', 'Accelerate', 'MobileCoreServices'
 
